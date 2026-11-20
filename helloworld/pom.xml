@@ -161,6 +161,9 @@
                                 <version>${version.server}</version>
                                 <context>cloud</context>
                             </discover-provisioning-info>
+                            <hostname>${wildfly.hostname}</hostname>
+                            <username>${wildfly.username}</username>
+                            <password>${wildfly.password}</password>
                         </configuration>
                         <executions>
                             <execution>
