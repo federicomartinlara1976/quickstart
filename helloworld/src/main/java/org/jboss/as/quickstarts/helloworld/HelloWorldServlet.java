@@ -37,7 +37,9 @@ import java.io.PrintWriter;
 @WebServlet("/HelloWorld")
 public class HelloWorldServlet extends HttpServlet {
 
-    static String PAGE_HEADER = "<html><head><title>helloworld</title></head><body>";
+    private static final long serialVersionUID = 1L;
+
+	static String PAGE_HEADER = "<html><head><title>helloworld</title></head><body>";
 
     static String PAGE_FOOTER = "</body></html>";
 
