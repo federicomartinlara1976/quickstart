@@ -23,6 +23,7 @@ import jakarta.jms.JMSException;
 import jakarta.jms.Message;
 import jakarta.jms.MessageListener;
 import jakarta.jms.TextMessage;
+import lombok.extern.jbosslog.JBossLog;
 
 /**
  * <p>
@@ -35,9 +36,8 @@ import jakarta.jms.TextMessage;
         @ActivationConfigProperty(propertyName = "destinationLookup", propertyValue = "queue/HELLOWORLDMDBQueue"),
         @ActivationConfigProperty(propertyName = "destinationType", propertyValue = "jakarta.jms.Queue"),
         @ActivationConfigProperty(propertyName = "acknowledgeMode", propertyValue = "Auto-acknowledge")})
+@JBossLog
 public class HelloWorldQueueMDB implements MessageListener {
-
-    private static final Logger LOGGER = Logger.getLogger(HelloWorldQueueMDB.class.toString());
 
     /**
      * @see MessageListener#onMessage(Message)
@@ -47,9 +47,9 @@ public class HelloWorldQueueMDB implements MessageListener {
         try {
             if (rcvMessage instanceof TextMessage) {
                 msg = (TextMessage) rcvMessage;
-                LOGGER.info("Received Message from queue: " + msg.getText());
+                log.info("Received Message from queue: " + msg.getText());
             } else {
-                LOGGER.warning("Message of wrong type: " + rcvMessage.getClass().getName());
+                log.warn("Message of wrong type: " + rcvMessage.getClass().getName());
             }
         } catch (JMSException e) {
             throw new RuntimeException(e);
