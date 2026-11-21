@@ -134,6 +134,9 @@
                                     <addOn>embedded-activemq</addOn>
                                 </addOns>
                             </discover-provisioning-info>
+	                        <hostname>${wildfly.hostname}</hostname>
+	                        <username>${wildfly.username}</username>
+	                        <password>${wildfly.password}</password>
                         </configuration>
                         <executions>
                             <execution>
