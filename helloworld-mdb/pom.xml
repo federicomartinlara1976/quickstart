@@ -72,7 +72,6 @@
             <artifactId>jakarta.enterprise.cdi-api</artifactId>
             <scope>provided</scope>
         </dependency>
-        
         <dependency>
             <groupId>jakarta.ejb</groupId>
             <artifactId>jakarta.ejb-api</artifactId>
@@ -103,12 +102,6 @@
             <artifactId>junit-jupiter</artifactId>
             <scope>test</scope>
         </dependency>
-        
-        <dependency>
-    		<groupId>org.jboss.logging</groupId>
-		    <artifactId>jboss-logging</artifactId>
-		    <scope>provided</scope>
-		</dependency>
         
         <dependency>
 			<groupId>org.projectlombok</groupId>
